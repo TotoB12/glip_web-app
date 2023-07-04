@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GLIP Results</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>GLIP Results</h1>
+        <img src="{{ url_for('static', filename=image) }}" class="img-responsive">
+        {% if caption %}
+        <h2>Caption:</h2>
+        <p>{{ caption }}</p>
+        {% elif answer %}
+        <h2>Answer:</h2>
+        <p>{{ answer }}</p>
+        {% endif %}
+        <hr>
+        <a href="/" class="btn btn-primary">Upload Another Image</a>
+    </div>
+</body>
+</html>
